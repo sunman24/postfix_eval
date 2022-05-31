@@ -1,0 +1,23 @@
+[package]
+name = "postfix_eval"
+version = "1.0.0"
+edition = "2021"
+authors = ["sunman24"]
+description = "A program for calculating expressions in postfix notation"
+repository = "https://github.com/sunman24/postfix_eval/"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[profile.dev]
+opt-level = 1
+debug = true
+lto = false
+panic = "unwind"
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = false
+panic = "unwind"
