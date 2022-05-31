@@ -11,7 +11,12 @@ fn ok_tests() {
 
     assert_eq!(pe.eval("+1 -1 +"), Ok(0.0));
     assert_eq!(pe.eval("+1 -1 -  2 *"), Ok(4.0));
+    assert_eq!(pe.eval("154 53 -"), Ok(101.0));
+    assert_eq!(pe.eval("-154 -53 -"), Ok(-101.0));
     assert_eq!(pe.eval("1 1 /"), Ok(1.0));
+    assert_eq!(pe.eval("155 5 /"), Ok(31.0));
+    assert_eq!(pe.eval("-155 -5 /"), Ok(31.0));
+    assert_eq!(pe.eval("155 -5 /"), Ok(-31.0));
     assert_eq!(pe.eval("1"), Ok(1.0));
 }
 
