@@ -19,8 +19,10 @@
                     "kind": "bin"
                 }
             },
-            "args": ["1", "1", "-"],
-            "cwd": "${workspaceFolder}"
+            "program": "${workspaceFolder}/target/debug/postfix_eval",
+            "args": ["1", "2", "-", "*"],
+            "cwd": "${workspaceFolder}",
+            "sourceLanguages": ["rust"]
         },
         {
             "type": "lldb",
@@ -38,8 +40,10 @@
                     "kind": "bin"
                 }
             },
-            "args": [],
-            "cwd": "${workspaceFolder}"
+            "program": "${workspaceFolder}/target/debug/postfix_eval",
+            "args": ["1", "2", "-", "*"],
+            "cwd": "${workspaceFolder}",
+            "sourceLanguages": ["rust"]
         }
     ]
 }
